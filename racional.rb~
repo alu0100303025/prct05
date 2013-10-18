@@ -42,3 +42,15 @@ class Fraccion
 		devuelto = Fraccion.new(numerador_nuevo, denominador_nuevo) #si hace falta simplificar, el initialize hará el trabajo
 	end
 end
+
+a = Fraccion.new(2,1)
+b = Fraccion.new(4,3)
+c = a.suma(b)
+puts c
+c = a.resta(b)
+puts c
+c = a.producto( b)
+puts c
+c = a.division( b)
+puts c
+c = a - b
