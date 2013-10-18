@@ -5,5 +5,3 @@ def gcd(u, v)
   end
   u
 end
-
-puts gcd(6,3)
