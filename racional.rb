@@ -41,4 +41,10 @@ class Fraccion
 		denominador_nuevo = @denominador * otro.numerador
 		devuelto = Fraccion.new(numerador_nuevo, denominador_nuevo) #si hace falta simplificar, el initialize hará el trabajo
 	end
+
+	def == (otro) # Operador de igualdad, para el test.
+		#si lo comparamos con número, comparamos valor :)
+		#sino, son iguales si sus numeradores y denominadores (simplificados) son iguales
+		((otro.is_a? Numeric) ? @numerador/@denominador == otro : @numerador == otro.numerador && @denominador == otro.denominador)
+	end
 end
