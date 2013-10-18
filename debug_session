@@ -1,0 +1,25 @@
+abraham@abraham-laptop:~/lpp/PruebasUnitarias$ ruby -rdebug gcd.rb
+Debug.rb
+Emacs support available.
+
+gcd.rb:1:def gcd(u, v)
+(rdb:1) b 3
+Set breakpoint 1 at gcd.rb:3
+(rdb:1) n
+gcd.rb:9:puts gcd(6,3)
+(rdb:1) n
+Breakpoint 1, gcd at gcd.rb:3
+gcd.rb:3:  while v == 0
+(rdb:1) v l
+  u => 6
+  v => 3
+(rdb:1) n
+gcd.rb:6:  u
+(rdb:1) v l
+  u => 6
+  v => 3
+(rdb:1) n
+6
+
+En la línea 3, al poner como condición que v == 0 nunca entra, ya que 0 no es un denominador válido. Cómo vemos u y v son != 0.
+Para que funcione el while debe tener como condición que v != 0
